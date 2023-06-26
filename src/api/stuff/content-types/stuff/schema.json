@@ -1,0 +1,33 @@
+{
+  "kind": "singleType",
+  "collectionName": "stuffs",
+  "info": {
+    "singularName": "stuff",
+    "pluralName": "stuffs",
+    "displayName": "Stuff"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    }
+  }
+}
