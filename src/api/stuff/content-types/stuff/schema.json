@@ -4,7 +4,8 @@
   "info": {
     "singularName": "stuff",
     "pluralName": "stuffs",
-    "displayName": "Stuff"
+    "displayName": "Stuff",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,19 +16,20 @@
       "type": "string"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "description": {
       "type": "richtext"
     },
-    "user": {
+    "users_permissions_user": {
       "type": "relation",
       "relation": "oneToOne",
-      "target": "admin::user"
+      "target": "plugin::users-permissions.user"
     }
   }
 }
